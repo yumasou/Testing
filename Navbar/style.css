@@ -1,0 +1,111 @@
+.navbar{
+    background: #2B2C2E;
+    animation:bounce-top 1s both;
+
+    /* background:rgba(255,255,255,0.1);
+    animation:bounce-top 1s both;
+    backdrop-filter: blur(5px); */
+}
+.list-menu{
+    display: flex;
+    justify-content:center ;
+    
+}
+
+.list-style{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+li{
+    list-style: none;
+    width: 15vw;
+    margin-right: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button{
+    width:155px;
+    height: 44px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button:hover{
+    width:156px;
+    height: 45px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.list-style:hover {
+    cursor: pointer;
+    color: red !important;
+    font-size: 19px;
+
+}
+.menu-icon{
+    display: none;
+}
+
+   .mobilebutton{
+    display: none;
+   }  
+
+@media  screen and (max-width:480px)  {
+    .navbar{
+        width: 100vw;
+    }
+   
+    .list-menu{
+        position:absolute;
+        margin:0;
+        padding:0;
+        left: -100%;
+        top:76px;
+        width:100%;
+        z-index:1;
+        opacity: 1 !important;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        transition: all 0.2s ease-out;
+    }
+    .list-menu.active{
+        position:absolute;
+        margin:0;
+        padding:0;
+        left:0;
+        top:76px;
+        width:100%;
+        z-index:1;
+        opacity: 1 !important;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        transition: all 0.2s ease-out;
+    }
+    li{
+        width: 100%;
+        opacity: 1;
+        margin:5px 0;
+        display: table !important;
+    }
+    
+    .menu-icon{
+        display: block;
+    } 
+    .button{
+        display: none;
+    }
+    .mobilebutton{
+        display: block;
+        width: 100%;
+        border-radius: 50px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    }
+@keyframes bounce-top{0%{transform:translateY(-45px);animation-timing-function:ease-in;opacity:1}24%{opacity:1}40%{transform:translateY(-24px);animation-timing-function:ease-in}65%{transform:translateY(-12px);animation-timing-function:ease-in}82%{transform:translateY(-6px);animation-timing-function:ease-in}93%{transform:translateY(-4px);animation-timing-function:ease-in}25%,55%,75%,87%{transform:translateY(0);animation-timing-function:ease-out}100%{transform:translateY(0);animation-timing-function:ease-out;opacity:1}}
